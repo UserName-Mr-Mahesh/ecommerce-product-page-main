@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #image-container {
+      width: 300px; /* Set the width of the container to fit your images */
+      overflow: hidden;
+      position: relative;
+    }
+
+    #image-slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .image {
+      width: 300px; /* Set the width of your images */
+      height: auto;
+    }
+
+    button {
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="image-container">
+    <div id="image-slider">
+      <img class="image" src="./images/image-product-1.jpg" alt="Image 1">
+      <img class="image" src="./images/image-product-2.jpg" alt="Image 2">
+      <img class="image" src="./images/image-product-3.jpg" alt="Image 3">
+      <img class="image" src="./images/image-product-4.jpg" alt="Image 4">
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+
+  <button onclick="moveLeft()">Left</button>
+  <button onclick="moveRight()">Right</button>
+
+  <script>
+    const slider = document.getElementById('image-slider');
+    // const imageWidth = document.querySelector('.image').offsetWidth;
+    const imageWidth = 300;
+    let currentPosition = 0;
+
+    function moveLeft() {
+      currentPosition += imageWidth;
+      if (currentPosition > 0) {
+        currentPosition = -((slider.children.length - 1) * imageWidth);
+      }
+      updateSliderPosition();
+    }
+
+    function moveRight() {
+      currentPosition -= imageWidth;
+      if (currentPosition < -((slider.children.length - 1) * imageWidth)) {
+        currentPosition = 0;
+      }
+      updateSliderPosition();
+    }
+
+    function updateSliderPosition() {
+      slider.style.transform = `translateX(${currentPosition}px)`;
+      console.log(`translateX(${currentPosition}px)`);
+    }
+  </script>
+
+</body>
+</html>

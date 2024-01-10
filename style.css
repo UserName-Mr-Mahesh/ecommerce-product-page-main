@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main{
+    background-color: aliceblue;
+}
+#nav,#container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#menusimbol,#menunone{
+    display: none;
+}
+
+#menu{
+    width: 40%;
+}
+#menu ul{
+    color: #888888;
+}
+#menu ul li:hover{
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#logo{
+    width: 10%;
+    cursor: pointer;
+}
+#logo img{
+    width: 50px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#left{
+    width: 50%;
+    padding: 10px;
+}
+#left>img{
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+#left ul img{
+    width: 100%;
+    border-radius: 10px;
+}
+/* #left ul li:hover{
+    border: 2px solid orange;
+    border-radius: 10px;
+} */
+#left ul img:hover{
+    border: 2px solid orange;
+    opacity: 0.7;
+}
+#right{
+    width: 50%;
+    font-size: 30px;
+    line-height: 50px;
+    padding: 5%;
+}
+#right>div{
+    display: flex;
+    justify-content: space-between;
+}
+#vlaue{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+#vlaue button{
+    width: 90px;
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+}
+#vlaue button:hover{
+    color: orange;
+    cursor: pointer;
+}
+#btn{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+#btn:hover{
+    opacity: 0.7;
+}
+
+h1, p, h3, span {
+    margin-bottom: 20px; /* Add margin to specific elements */
+}
+span{
+    color: orange;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* background: rgba(255, 255, 255, 0); Initial opacity is set to 0 */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none; /* Allows clicks to pass through initially */
+  }
+
+  .overlay.active {
+    background: rgba(255, 255, 255, 0.5); /* Opacity set to 0.5 when the overlay is active */
+    pointer-events: auto; /* Enable pointer events when the overlay is active */
+  }
+  .overlay svg{
+    cursor: pointer;
+  }
+  #image-container {
+    width: 500px; /* Set the width of the container to fit your images */
+    overflow: hidden;
+    position: relative;
+  }
+
+  #image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .image {
+    width: 500px; /* Set the width of your images */
+    height: auto;
+    border-radius: 10px;
+  }
+  #close{
+    position: relative;
+    top: -260px;
+  }
+  #cart{
+    width: 400px;
+    background-color: white;
+    display: none;
+    row-gap: 40px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    box-shadow: 10px 10px 5px 0px #888888;
+
+  }
+  #detailes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #detailes img{
+    width: 80px;
+    border-radius: 10px;
+  }
+  #check{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    border-radius: 10px;
+  }
+  #empty{
+    text-align: center;
+  }
+#item{
+    display: none;
+    row-gap: 40px;
+}
+  @media screen and (max-width:600px){
+
+    #menusimbol{
+        display: block;
+    }
+    #menu{
+        display: none;
+        float: right;
+        height:max-content;
+        padding: 10px;
+        position: static;   
+    }
+    #menunone svg{
+        /* float: left; */
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: aliceblue;
+        width: 250px;
+    }
+    #menu ul{
+        display: block;
+        position: fixed;
+        background-color: aliceblue;
+        padding: 100px 0px 0px 20px;
+        top: 20px;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        line-height: 50px;
+    }
+    #container{
+        display: inline-block;
+    }
+    #left{
+        width: 100%;
+    }
+    #right{
+        width: 100%;
+    }
+    #cart{
+        width: 100%;
+    }
+  }
