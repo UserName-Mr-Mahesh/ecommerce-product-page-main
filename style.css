@@ -30,11 +30,20 @@
 }
 #logo{
     width: 10%;
+}
+#logo svg{
     cursor: pointer;
 }
 #logo img{
     width: 50px;
+    cursor: pointer;
+
 }
+#logo img:hover{
+    border: 1px solid orange;
+    border-radius: 50%;
+}
+
 ul{
     list-style-type: none;
     display: flex;
@@ -128,8 +137,15 @@ span{
     background: rgba(255, 255, 255, 0.5); /* Opacity set to 0.5 when the overlay is active */
     pointer-events: auto; /* Enable pointer events when the overlay is active */
   }
-  .overlay svg{
+  .overlay #svg{
     cursor: pointer;
+    width: 50px;
+    background: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
   }
   #image-container {
     width: 500px; /* Set the width of the container to fit your images */

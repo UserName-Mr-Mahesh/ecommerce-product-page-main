@@ -77,16 +77,17 @@ function itemRemove() {
 }
 function cart(){
   const cart=document.getElementById("cart");
-  if(cart.style.display==="none"){
+  console.log(cart.style.display);
+  if(cart.style.display==""){
     cart.style.display="grid";
     let result=document.getElementById("result");
     let empty=document.getElementById("empty");
     if(result.innerHTML!=""){
-      empty.style.display="none";
+      empty.style.display="";
       let item=document.getElementById("item") ;
       item.style.display="grid";
     }
   }else{
-    cart.style.display="none";
+    cart.style.display="";
   }
 }

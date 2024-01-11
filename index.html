@@ -63,8 +63,9 @@
       </div>
     </div>
     <div class="overlay" id="overlay">
-      
-      <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg" onclick="moveLeft()"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+      <div id="svg" onclick="moveLeft()">
+        <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg" ><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+      </div>
       <div id="image-container">
         <div id="image-slider">
           <img class="image" src="./images/image-product-1.jpg" alt="Image 1">
@@ -74,7 +75,9 @@
           <!-- Add more images as needed -->
         </div>
       </div>
-      <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg" onclick="moveRight()"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+      <div id="svg" onclick="moveRight()">
+        <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg" ><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+      </div>
       <svg width="28" height="30" xmlns="http://www.w3.org/2000/svg" id="close" onclick="toggleOverlayOff()"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#FF0000" fill-rule="evenodd"/></svg>
     </div>
     <div id="cart">
